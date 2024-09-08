@@ -7,6 +7,9 @@ ENV LANG=C.UTF-8
 # Set Arguments.
 ARG NEXTJS_PORT
 
+# Install npm patch.
+RUN npm install -g npm@10.8.3
+
 # Set up working directory.
 WORKDIR /app
 
