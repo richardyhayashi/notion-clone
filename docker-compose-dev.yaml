@@ -20,12 +20,21 @@ services:
       dockerfile: Dockerfile.dev
       args:
         NEXTJS_PORT: ${NEXTJS_PORT}
+        # Use user id & group id in .env
+        USER_ID: ${USER_ID:-0}
+        GROUP_ID: ${GROUP_ID:-0}
+    user: ${USER_ID}:${GROUP_ID}
     restart: unless-stopped
     #ports:
     #  - ${NEXTJS_PORT_OUT}:${NEXTJS_PORT}
     volumes:
       - ./src:/app
+      - dot_next:/app/.next
       - node_modules:/app/node_modules
+      # Set the logins and groups identical to host environment
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/shadow:/etc/shadow:ro
     environment:
       - NODE_ENV=development
     #env_file:
@@ -34,4 +43,5 @@ services:
       - nginx
 
 volumes:
+  dot_next:
   node_modules:

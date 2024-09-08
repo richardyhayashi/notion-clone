@@ -9,7 +9,7 @@ Source:
 02. Outline Knowledge
 03. Set Up Project
 04. Set Up shadcn
-05. 
+05. Set Up Clerk Auth
 06.
 07.
 08.
@@ -42,3 +42,7 @@ In `src` foler:
 #### Add Component
 
 `$ npx shadcn@latest add {component}`
+
+### Clerk
+
+`$ npm i @clerk/nextjs`
