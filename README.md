@@ -12,7 +12,7 @@ Source:
 05. Set Up Clerk Auth
 06. Landing Page
 07. Dashboard UI
-08.
+08. DrizzleORM
 09.
 10.
 11.
@@ -67,11 +67,35 @@ In `src` foler:
 Website: `https://lucide.dev/`
 
 
-## Neon.tech
+## Register w/ Neon.tech
 
 `https://neon.tech`
+
+### Install DrizzleOrm
+
+`$ npm i drizzle-orm @neondatabase/serverless dotenv`
+`$ npm i -D drizzle-kit`
+
+### Dizzle Migrations
+
+Add in `package.json` scripts:
+`"db:generate": "drizzle-kit generate"`
+`"db:migrate": "drizzle-kit migrate"`
+`"db:push": "drizzle-kit push"`
+
+Run:
+`$ npm run db:generate`
+or
+`$ npm run db:migrate`
+or
+`$ npm run db:push`
+
+### Run "dizzle-kit studio"
+
+`$ npx drizzle-kit studio`
+
 
 
 ## VSCode
 
-`tsrafce`
+`tsrafce` - 
