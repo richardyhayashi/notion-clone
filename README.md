@@ -13,7 +13,7 @@ Source:
 06. Landing Page
 07. Dashboard UI
 08. DrizzleORM
-09.
+09. Create Note UI
 10.
 11.
 12.
@@ -99,3 +99,4 @@ or
 ## VSCode
 
 `tsrafce` - 
+`Ctrl + K + C`  - Add line comment
