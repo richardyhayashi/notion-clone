@@ -14,7 +14,7 @@ Source:
 07. Dashboard UI
 08. DrizzleORM
 09. Create Note UI
-10.
+10. OpenAI Generate Image Prompt
 11.
 12.
 13.
@@ -94,6 +94,16 @@ or
 
 `$ npx drizzle-kit studio`
 
+
+## OpenAI
+
+### Install
+
+`$ npm install openai-edge`
+
+### ????
+
+`$ npm install @tanstack/react-query`
 
 
 ## VSCode
